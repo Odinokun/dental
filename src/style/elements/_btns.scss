@@ -1,0 +1,79 @@
+.btn {
+  font-family: 'HKGrotesk-SemiBold', sans-serif;
+  font-weight: 600;
+  line-height: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  padding: 10px 32px;
+  cursor: pointer;
+  user-select: none;
+  transition: $transition;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px !important;
+  box-shadow: none;
+
+  @include responsive-font(14, 12);
+
+  svg {
+    flex: none;
+    width: 12px;
+    height: 12px;
+    margin-right: 16px;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+.btn--default {
+  color: #fff;
+  border: none;
+  background-color: #49b858;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    transition: $transition;
+    background-image: linear-gradient(90deg, #49b858 0%, #64cc72 100%);
+  }
+
+  &:hover {
+    color: #fff;
+
+    &::before {
+      opacity: 0;
+    }
+  }
+}
+
+.btn--cta {
+  width: 100%;
+  padding: 10px 124px;
+}
+
+.btn--transparent {
+  color: #151515;
+  border: 1px solid #151515;
+  background-color: transparent;
+
+  svg {
+    fill: #49b858;
+  }
+
+  &:hover {
+    color: #49b858;
+    border-color: #49b858;
+  }
+}

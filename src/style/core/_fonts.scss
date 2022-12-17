@@ -1,11 +1,20 @@
 @font-face {
-  font-family: OpenSans;
-  src:  url('../fonts/OpenSans.woff2') format('woff2'),
-        url('../fonts/OpenSans.woff')  format('woff');
+  font-family: HKGrotesk-Regular;
+
+  src: url('../fonts/HKGrotesk-Regular.woff2') format('woff2'),
+  url('../fonts/HKGrotesk-Regular.woff') format('woff');
 }
 
 @font-face {
-  font-family: OpenSans-Bold;
-  src:  url('../fonts/OpenSans-Bold.woff2') format('woff2'),
-        url('../fonts/OpenSans-Bold.woff')  format('woff');
+  font-family: HKGrotesk-Medium;
+
+  src: url('../fonts/HKGrotesk-Medium.woff2') format('woff2'),
+  url('../fonts/HKGrotesk-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: HKGrotesk-SemiBold;
+
+  src: url('../fonts/HKGrotesk-SemiBold.woff2') format('woff2'),
+  url('../fonts/HKGrotesk-SemiBold.woff') format('woff');
 }

@@ -1,20 +1,19 @@
 extends ../_template
 
 block variables
-  - var title       = 'Index'
-  - var description = ''
-  - var ogtitle     = ''
-  - var ogimage     = ''
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
 
-  - var pageHeaderTitle = ''
-  - var breadcrumbs     = 'breadcrumbs link'
+  - let breadcrumbs     = 'Dental Group'
 
 block content
-  .main-wrap.no-js
+  .main-wrap
     include ../sections/header
 
     //begin content
-    main.main.index
+    main.main
+      .container
+
     //end content
 
     include ../sections/footer
