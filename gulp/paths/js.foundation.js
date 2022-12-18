@@ -6,6 +6,4 @@ module.exports = [
   './node_modules/swiper/swiper-bundle.js',
   './src/vendors/twentytwenty-master/js/jquery.event.move.js',
   './src/vendors/twentytwenty-master/js/jquery.twentytwenty.js'
-
-
 ];

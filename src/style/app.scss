@@ -1,4 +1,5 @@
 // core
+@import 'core/bootstrap-grid';
 @import 'core/fonts';
 @import 'core/variables';
 @import 'core/mixins';
@@ -12,7 +13,7 @@
 
 //section
 //@import 'sections/header';
-//@import 'sections/footer';
+@import 'sections/footer';
 
 //pages
 @import 'pages/index';

@@ -9,6 +9,17 @@ p {
   margin: 0 0 10px 0;
 }
 
+a {
+  transition: $transition;
+  text-decoration: none;
+  color: $brand;
+
+  &:hover {
+    text-decoration: none;
+    color: $brand;
+  }
+}
+
 .h1,
 .h2,
 .h3,
@@ -50,7 +61,6 @@ p {
 
   @include responsive-font(18, 16);
 }
-
 
 .body-l {
   font-family: $font;
