@@ -1,0 +1,146 @@
+.menu {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  transition: .5s;
+  transform: translateX(-100vw);
+  border-top: 1px solid rgba(138, 138, 138, .2);
+  background-color: #fff;
+
+  @include min(375) {
+    top: 75px;
+  }
+  @include min(576) {
+    top: 90px;
+  }
+
+
+  & > .container {
+    overflow: auto;
+    height: calc(100vh - 75px);
+    padding-bottom: 60px;
+
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    @include min(375) {
+      height: calc(100vh - 75px);
+    }
+    @include min(576) {
+      height: calc(100vh - 90px);
+    }
+    @include min(768) {
+      padding-bottom: 100px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+  }
+
+  &::before {
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    content: '';
+    pointer-events: none;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .65) 49.48%, #fff 98.44%);
+
+    @include min(768) {
+      height: 130px;
+    }
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu__item {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(138, 138, 138, .2);
+
+  @include min(768) {
+    padding: 16px 0;
+  }
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    .menu__text {
+      color: $brand;
+    }
+  }
+}
+
+.menu__img {
+  flex: none;
+  margin-right: 20px;
+
+  @include min(768) {
+    margin-right: 40px;
+  }
+
+  img {
+    display: block;
+    width: 70px;
+
+    @include min(768) {
+      width: 85px;
+    }
+  }
+}
+
+.menu__text {
+  transition: $transition;
+  color: #151515;
+}
+
+.menu__cross {
+  margin-left: auto;
+
+  svg {
+    fill: $brand;
+    width: 24px;
+    height: 24px;
+
+    @include min(768) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+/* begin SECOND */
+.menu__second-list {
+  display: flex;
+  margin: 0;
+  padding: 30px 0 20px 0;
+  list-style: none;
+
+  @include min(992) {
+    display: none;
+  }
+}
+
+.menu__second-item {
+  margin-right: 30px;
+}
+
+.menu__second-link {
+  color: #151515;
+}
+
+/* end   SECOND */

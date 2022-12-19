@@ -1,9 +1,7 @@
-module.exports = function() {
+module.exports = function () {
 
-  // begin SVG for IE
-  $(function() {
+  $(function () {
     svg4everybody();
   });
-  // end SVG for IE
 
 };

@@ -102,6 +102,7 @@ svg {
 
 .main {
   flex-grow: 1;
+  //padding-top: 130px;
 }
 
 div.container {
@@ -110,15 +111,16 @@ div.container {
   max-width: 1670px;
   margin: 0 auto;
   padding: 0 10px;
-@include min(576) {
-  padding: 0 40px;
 
-}
-
+  @include min(576) {
+    padding: 0 40px;
+  }
   @include min(1200) {
+    padding: 0 70px;
+  }
+  @include min(1400) {
     padding: 0 125px;
   }
-
 }
 
 .bor-t {
@@ -134,3 +136,31 @@ div.container {
     background-color: rgba(138, 138, 138, .2);
   }
 }
+
+/* begin WITH DISCOUNT */
+.main-wrap--with-discount {
+  padding-top: 40px;
+  .menu {
+    top: 110px;
+
+    @include min(375) {
+      top: 115px;
+    }
+    @include min(576) {
+      top: 125px;
+    }
+  }
+
+  .menu > .container {
+    height: calc(100vh - 110px);
+
+    @include min(375) {
+      height: calc(100vh - 115px);
+    }
+    @include min(576) {
+      height: calc(100vh - 125px);
+    }
+  }
+}
+
+/* end   WITH DISCOUNT */

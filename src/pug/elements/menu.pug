@@ -1,0 +1,38 @@
+mixin menu-item(img, title)
+  li.menu__item
+    a(href="#").menu__link
+      .menu__img
+        img(src="assets/img/menu/" + img + ".jpg" alt="Dental Group")
+      .menu__text.h3 #{title}
+      .menu__cross
+        +svg('cross')
+
+//BEGIN menu
+nav.menu#menu
+  .container
+    //BEGIN menu__list
+    ul.menu__list.col-12
+      +menu-item('1', 'Dental Bonding')
+      +menu-item('2', 'Dentures')
+      +menu-item('3', 'Invisalign')
+      +menu-item('4', 'Root Canals')
+      +menu-item('5', 'Teeth Cleaning')
+      +menu-item('6', 'Teeth Whitening')
+      +menu-item('7', 'Implants')
+      +menu-item('8', 'Restorative')
+      +menu-item('9', 'Family Dentist')
+      +menu-item('10', 'Dental Extractions')
+      +menu-item('11', 'Cosmetic Dentistry')
+      +menu-item('12', 'Teeth Grinding')
+    //END   menu__list
+
+    //BEGIN menu__second-list
+    ul.menu__second-list.col-12
+      li.menu__second-item
+        a(href="#").menu__second-link.h4 About us
+      li.menu__second-item
+        a(href="#").menu__second-link.h4 Team
+      li.menu__second-item
+        a(href="#").menu__second-link.h4 Contact
+    //END   menu__second-list
+//END   menu
