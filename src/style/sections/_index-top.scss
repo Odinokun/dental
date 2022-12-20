@@ -1,0 +1,109 @@
+.index-top {
+  position: relative;
+  padding-bottom: 470px;
+
+  @include min(576) {
+    padding-bottom: 620px;
+  }
+  @include min(992) {
+    padding-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 450px;
+    content: '';
+    background-color: #396;
+    background-image: url('../img/bg-index-top.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @include min(576) {
+      height: 600px;
+    }
+    @include min(992) {
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 50%;
+      height: 100%;
+    }
+  }
+}
+
+.index-top__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 150px;
+
+  @include min(768) {
+    min-height: 100vh;
+  }
+  @include min(992) {
+    padding-bottom: 40px;
+  }
+}
+
+.index-top__title {
+  margin-bottom: 34px;
+
+  span {
+    font-family: $philosopher;
+    color: $brand;
+  }
+}
+
+.index-top__text {
+  max-width: 580px;
+  margin-bottom: 20px;
+  padding-top: 60px;
+
+  @include min(768) {
+    margin-bottom: 50px;
+  }
+  @include min(1200) {
+    padding-top: 100px;
+  }
+}
+
+.index-top__footer {
+  display: flex;
+  flex-direction: column;
+
+  @include min(576) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.index-top__google-reviews-widget {
+  width: 50%;
+  max-width: 290px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+
+  @include min(576) {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.index-top__awards {
+  width: 50%;
+  max-width: 186px;
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
