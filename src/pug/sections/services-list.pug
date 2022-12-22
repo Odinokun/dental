@@ -1,0 +1,28 @@
+mixin services-item(img, title)
+  .col-12.col-lg-4
+    a(href="service.html").services-list__item
+      .services-list__img
+        img(src="assets/img/services/" + img + ".jpg" alt="Dental Group")
+      .services-list__info
+        .services-list__title.h3 #{title}
+        .services-list__icon
+          +svg('cross')
+
+
+//BEGIN services-list
+.services-list
+  .container
+    .row
+      +services-item('01', 'Dental Bonding')
+      +services-item('02', 'Dentures')
+      +services-item('03', 'Invisalign')
+      +services-item('04', 'Root Canals')
+      +services-item('05', 'Teeth Cleaning')
+      +services-item('06', 'Teeth Whitening')
+      +services-item('07', 'Implants')
+      +services-item('08', 'Restorative')
+      +services-item('09', 'Family Dentist')
+      +services-item('10', 'Dental Extractions')
+      +services-item('11', 'Cosmetic Dentistry')
+      +services-item('12', 'Teeth Grinding')
+//END   services-list
