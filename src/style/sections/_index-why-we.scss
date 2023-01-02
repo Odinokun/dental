@@ -1,0 +1,11 @@
+.index-why-we__title {
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+
+  span {
+    font-family: $philosopher;
+  }
+}

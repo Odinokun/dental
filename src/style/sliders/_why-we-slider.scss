@@ -1,0 +1,32 @@
+.why-we-slider {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 40px;
+  pointer-events: none;
+
+  @include min(768) {
+    padding-bottom: 80px;
+  }
+  @include min(992) {
+    padding-bottom: 120px;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+
+  .swiper-slide {
+    width: auto !important;
+    max-width: 40vw;
+  }
+}
+
+.why-we-slider__img {
+  overflow: hidden;
+  border-radius: 8px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}

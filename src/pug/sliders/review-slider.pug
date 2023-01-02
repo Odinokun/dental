@@ -1,0 +1,49 @@
+mixin review-item-ava(img, name, rating, date, text)
+  .review-slider__item.swiper-slide
+    .review-slider__header
+      .review-slider__icon(style="background-color: #689BCA")
+        span.h4 J
+        img(src="assets/img/ava/" + img + ".jpg" alt="avatar")
+      .review-slider__info
+        .review-slider__name.h5 #{name}
+        .review-slider__info-bottom
+          .review-slider__rating(data-rating=rating)
+            span ★
+            span ★
+            span ★
+            span ★
+            span ★
+          .review-slider__date #{date}
+    .review-slider__text #{text}
+
+
+mixin review-item(name, rating, date, text)
+  .review-slider__item.swiper-slide
+    .review-slider__header
+      .review-slider__icon(style="background-color: #689BCA")
+        span S
+      .review-slider__info
+        .review-slider__name.h5 #{name}
+        .review-slider__info-bottom
+          .review-slider__rating(data-rating=rating)
+            span ★
+            span ★
+            span ★
+            span ★
+            span ★
+          .review-slider__date #{date}
+    .review-slider__text #{text}
+
+
+//BEGIN review-slider-wrap
+.review-slider-wrap
+  .container
+    #review-slider.review-slider
+      .swiper-wrapper
+        +review-item-ava('01', 'James Moore', '5', '2 month ago', 'I’ve been going to Baltimore City Dental Group for three years. I’m always greeted with a smile and a welcome back. The dental staff is friendly and they do great work.Thank you Baltimore City Dental Group.')
+        +review-item-ava('02', 'Hassan Sheikh', '4', '3 days ago', 'I let two strangers work on my mouth for an hour and walked away with a better smile. The staff here is cordial, honest, and earnest about working on your health goals with you. Great practice, better people!')
+        +review-item('Julianne Ohanian', '5', '3 days ago', 'The whole team was so kind and warm. The doctor (Dr. B) really showed me exactly what he was noticing with my teeth, explained it all in terms that were clear, and left me to make informed decisions about what dental care and procedures I would get and when. Also they have appointments until 5pm which is a godsend for those of us who have less flexible schedules!')
+        +review-item-ava('01', 'Sharon Bea', '3', '2 month ago', 'Amazing experience!! I had a major procedures done today and didn’t feel a thing. I would recommend my family and friend to this dentist. They were honest, kind, and straight to business. Thanks.')
+        +review-item-ava('02', 'Julianne Ohanian', '5', '3 days ago', 'The whole team was so kind and warm. The doctor (Dr. B) really showed me exactly what he was noticing with my teeth, explained it all in terms that were clear, and left me to make informed decisions about what dental care and procedures I would get and when. Also they have appointments until 5pm which is a godsend for those of us who have less flexible schedules!')
+        +review-item('James Moore', '5', '2 month ago', 'I’ve been going to Baltimore City Dental Group for three years. I’m always greeted with a smile and a welcome back. The dental staff is friendly and they do great work.Thank you Baltimore City Dental Group.')
+//END   review-slider-wrap

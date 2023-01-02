@@ -1,0 +1,143 @@
+.clinic-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+/* begin LG */
+.clinic-slider-lg {
+  position: relative;
+  margin: 0;
+  pointer-events: none;
+}
+
+.clinic-slider-lg__item {
+  position: relative;
+  min-height: 670px;
+  padding-top: 80px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  @include min(992) {
+    min-height: 800px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    content: '';
+    transform: rotate(-180deg);
+    opacity: .4;
+    background-image: linear-gradient(180deg, rgba(21, 21, 21, 0) 0%, #151515 100%);
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    content: '';
+    opacity: .5;
+    background-image: linear-gradient(180deg, rgba(21, 21, 21, 0) 0%, #151515 100%);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.clinic-slider-lg__title {
+  color: #fff;
+
+  span {
+    font-family: $philosopher;
+    display: block;
+  }
+}
+
+/* end   LG */
+
+/* begin SM */
+.clinic-slider__thumb {
+  position: absolute !important;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  user-select: none;
+  pointer-events: none;
+
+  @include min(1200) {
+    bottom: 60px;
+  }
+}
+
+.clinic-slider-sm {
+  overflow: hidden;
+}
+
+.clinic-slider-sm__item {
+  position: relative;
+  padding-top: 20px;
+  cursor: pointer;
+  user-select: none;
+  transition: .5s;
+  opacity: .5;
+
+  &.swiper-slide-thumb-active {
+    opacity: 1;
+  }
+}
+
+.clinic-slider-sm__text {
+  color: #fff;
+}
+
+.swiper-slide-thumb-active.clinic-slider-sm__item {
+  overflow: hidden;
+}
+
+.clinic-slider-sm__item::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  margin: auto;
+  content: '';
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.clinic-slider-sm__item::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  margin: auto;
+  content: '';
+  border-radius: 3px;
+}
+
+.swiper-slide-thumb-active.clinic-slider-sm__item::before {
+  animation: slide-progress 5s linear forwards;
+  background-color: $brand;
+}
+
+@keyframes slide-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* end   SM */

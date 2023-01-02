@@ -1,0 +1,41 @@
+mixin slide-lg(img)
+  .clinic-slider-lg__item.swiper-slide(style="background-image: url('assets/img/sliders/clinics/" + img + ".jpg')")
+    .container
+      .row
+        .col-12
+          h2.clinic-slider-lg__title.h2 Modern and innovative <span>Dental Clinic</span>
+
+mixin slide-sm(text)
+  .clinic-slider-sm__item.swiper-slide
+    h4.h4.clinic-slider-sm__text #{text}
+    .swiper-pagination-bullet
+
+
+//BEGIN clinic-slider
+.clinic-slider
+  //BEGIN clinic-slider-lg
+  #clinic-slider-lg.clinic-slider-lg
+    .swiper-wrapper
+      +slide-lg('01')
+      +slide-lg('02')
+      +slide-lg('03')
+      +slide-lg('01')
+      +slide-lg('02')
+      +slide-lg('03')
+  //END   clinic-slider-lg
+
+  //BEGIN clinic-slider-sm
+  .clinic-slider__thumb
+    .container
+      .row
+        .col-12
+          #clinic-slider-sm.clinic-slider-sm
+            .swiper-wrapper#swiper-wrapper
+              +slide-sm('Friendly and professional personal and comfortable waiting area')
+              +slide-sm('High-technology and comfortable dental armchair')
+              +slide-sm('Modern equipment and high quality instruments')
+              +slide-sm('Friendly and professional personal and comfortable waiting area')
+              +slide-sm('High-technology and comfortable dental armchair')
+              +slide-sm('Modern equipment and high quality instruments')
+  //END   clinic-slider-sm
+//END   clinic-slider

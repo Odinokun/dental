@@ -21,27 +21,31 @@
 }
 
 // ===== placeholder style =====
-@mixin placeholder-color($color) {
+@mixin placeholder-color($color, $size) {
   opacity: 1;
   /* Chrome/Opera/Safari */
   &::-webkit-input-placeholder {
     opacity: 1;
+    font-size: 13px;
     color: $color;
   }
   /* Firefox 19+ */
   &::-moz-placeholder {
     opacity: 1;
+    font-size: 13px;
     color: $color;
   }
   /* IE 10+ */
   &:-ms-input-placeholder {
     opacity: 1;
     color: $color;
+    font-size: 13px;
   }
   /* Firefox 18- */
   &:-moz-placeholder {
     opacity: 1;
     color: $color;
+    font-size: 13px;
   }
 }
 

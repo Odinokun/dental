@@ -6,5 +6,7 @@ $(function () {
   require('./modules/menu')();
   require('./modules/bgMenu')();
   require('./modules/closeDiscount')();
+  require('./modules/customScrollbar')();
+  require('./modules/inputPlaceholder')();
 
 });

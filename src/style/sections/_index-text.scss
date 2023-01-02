@@ -1,0 +1,32 @@
+.index-text__inn {
+  overflow: auto;
+  max-height: 270px;
+  padding-right: 40px;
+  @include min(992) {
+  padding-right: 70px;
+
+  }
+}
+
+.index-text__title {
+  margin-bottom: 20px;
+  @include min(992) {
+  margin-bottom: 40px;
+
+  }
+}
+
+.index-text__descr {
+  p {
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #8a8a8a;
+    @include min(992) {
+    margin-bottom: 30px;
+
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
