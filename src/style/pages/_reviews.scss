@@ -1,0 +1,69 @@
+.reviews {
+  padding-bottom: 0;
+
+  @include min(992) {
+    padding-bottom: 100px;
+  }
+
+  .row {
+    overflow: hidden;
+  }
+}
+
+.reviews__title {
+  margin-bottom: 40px;
+
+  @include min(992) {
+    margin-bottom: 80px;
+  }
+
+  span {
+    font-family: $philosopher;
+  }
+}
+
+.review__item {
+  position: relative;
+  padding-bottom: 40px;
+
+  @include min(768) {
+    padding-bottom: 120px;
+  }
+
+  &::before {
+    @include min(768) {
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      content: '';
+      background-color: rgba(138, 138, 138, .2);
+    }
+  }
+}
+
+.reviews__more {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 24px 24px 24px 18px;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: #404040;
+  border: none;
+  border-radius: 2px !important;
+  background-color: #f3f5f7;
+  box-shadow: none;
+
+  @include min(992) {
+    margin-bottom: 100px;
+  }
+}

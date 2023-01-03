@@ -1,0 +1,62 @@
+.banner-review-wrap {
+  background-color: #dff9ea;
+
+  @include min(1400) {
+    background-color: transparent;
+  }
+}
+
+.banner-review {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  border-radius: 2px;
+  background-color: #dff9ea;
+
+  .row {
+    align-items: center;
+  }
+}
+
+.banner-review__title {
+  margin-bottom: 20px;
+
+  span {
+    font-family: $philosopher;
+  }
+}
+
+.banner-review__descr {
+  margin-bottom: 60px;
+
+  @include min(992) {
+    margin-bottom: 0;
+  }
+  @include min(1400) {
+    max-width: 460px;
+  }
+}
+
+.banner-review__google {
+  overflow: hidden;
+  max-width: 290px;
+  margin-right: auto;
+  margin-bottom: 40px;
+  margin-left: auto;
+  border-radius: 5px;
+
+  @include min(576) {
+    margin-bottom: 0;
+  }
+  @include min(992) {
+    margin-right: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.banner-review__btn {
+  width: 100%;
+}
