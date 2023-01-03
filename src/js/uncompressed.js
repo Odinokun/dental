@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'services',
     'faq',
     'reviews',
+    'contacts',
     ]);
 });
 

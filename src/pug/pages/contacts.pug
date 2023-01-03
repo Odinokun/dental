@@ -1,0 +1,90 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'contact'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs
+      .contacts
+        //BEGIN contacts__top
+        .contacts-top
+          .container
+            .col-12.col-lg-6
+              h1.contacts-top__title.h1 Contact
+              a(href="https://goo.gl/maps/ydV85MtpZcgKfzGB8" target="_blank" rel="nofollow noopener noreferrer").h5.contacts-top__address 300 N. Charles st. Suite D Baltimore MD 21201
+              a(href="mailto:baltimorecitydentalgroup@gmail.com").contacts-top__mail baltimorecitydentalgroup@gmail.com
+              a(href="tel:+4106850002").contacts-top__phone.btn.btn--transparent
+                span call us  –  (410) 685 - 0002
+
+              //BEGIN contacts-top__schedule
+              ul.contacts-top__schedule
+                li.contacts-top__schedule-item
+                  span Monday
+                  span 9:00 AM - 6:00 PM
+                li.contacts-top__schedule-item
+                  span Tuesday
+                  span 9:00 AM - 7:00 PM
+                li.contacts-top__schedule-item
+                  span Wednesday
+                  span 9:00 AM - 7:00 PM
+                li.contacts-top__schedule-item
+                  span Thursday
+                  span 9:00 AM - 6:00 PM
+                li.contacts-top__schedule-item
+                  span friday
+                  span 9:00 AM - 5:00 PM
+              //END   contacts-top__schedule
+            .contacts-top__descr.body-s If you’re looking for directions to the dentist office in Glen Burnie, you can simply use Google Maps navigation to get to our location.
+        //END   contacts__top
+
+        .contacts-top__map#map
+    //end content
+
+    //BEGIN contacts-form
+    .contacts-form
+      .container
+        .row
+          h2.contacts-form__title.h2 Need a help? <span>Send a message or make appointment!</span>
+        .row
+          //BEGIN form
+          .contacts-form__form.col-12.col-lg-5.col-xl-4
+            .contacts-form__input.input
+              input(placeholder='Your Full Name')
+              span Your Full Name
+            .contacts-form__input.input
+              input(placeholder='Email')
+              span Email
+            .contacts-form__textarea.textarea
+              textarea(placeholder='Text your message')
+              span Text your message
+            button.form__btn.btn.btn--default
+              span contact me
+          //END   form
+
+          //BEGIN or
+          .contacts-form__or.col-12.col-lg-2.col-xl-4
+            span or
+          //END   or
+
+          //BEGIN info
+          .contacts-form__info.col-12.col-lg-5.col-xl-4
+            .contacts-form__phone
+              .contacts-form__phone-text by phone
+              a(href="tel:4106850002").contacts-form__phone-link.h2 (410) 685 - 0002
+
+            button.contacts-form__btn.btn.btn--transparent
+              span book an Appointment online
+          //END   info
+    //END   contacts-form
+
+    include ../sections/footer
+    include ../elements/сhat
+    include ../sections/scripts-with-map
