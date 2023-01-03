@@ -1,0 +1,163 @@
+.team {
+  padding-bottom: 40px;
+
+  @include min(768) {
+    padding-bottom: 80px;
+  }
+  @include min(992) {
+    padding-bottom: 100px;
+  }
+}
+
+.team__title {
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 60px;
+  }
+}
+
+/* begin DOC */
+.team-docs__doc {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(138, 138, 138, .2);
+
+  @include min(992) {
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+  }
+
+  .row {
+    align-items: flex-start;
+  }
+;
+}
+
+.team-docs__ava {
+  position: relative;
+  overflow: hidden;
+  max-width: 350px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+
+  @include min(992) {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.team-docs__ava-help {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  width: calc(100% - 40px);
+
+  @include min(992) {
+    bottom: 35px;
+    left: 45px;
+    max-width: calc(100% - 90px);
+  }
+}
+
+.team-docs__ava-text {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.team-docs__btn {
+  width: 100%;
+}
+
+.team-docs__name {
+  margin-bottom: 5px;
+}
+
+.team-docs__position {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  color: #8a8a8a;
+}
+
+.team-docs__block {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.team-docs__block--specialisation {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(138, 138, 138, .2);
+}
+
+.team-docs__block-title {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 110%;
+  margin-bottom: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+.team-docs__block-descr-list {
+  margin: 0 0 20px 0;
+  padding: 0 0 0 20px;
+}
+
+.team-docs__block-descr-item {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+  list-style-image: url('../img/ul.png');
+  color: #151515;
+}
+
+/* end   DOC */
+
+/* begin SUBDOC */
+.subdoc {
+  margin-bottom: 40px;
+
+  @include min(768) {
+    margin-bottom: 0;
+  }
+}
+
+.subdoc__img {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+
+  @include min(768) {
+    margin-bottom: 20px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.subdoc__name {
+  margin-bottom: 2px;
+}
+
+.subdoc__position {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #8a8a8a;
+}
+
+/* end   SUBDOC */

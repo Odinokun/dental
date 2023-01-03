@@ -1,0 +1,196 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'our team'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs
+      .team
+        .container
+          h1.team__title.h1 Our <span>team</span>
+
+          //BEGIN team-docs
+          .team-docs
+            //BEGIN doc
+            .team-docs__doc
+              .row.justify-content-between
+                //BEGIN ava
+                .team-docs__ava.col-12.col-lg-4
+                  img(src="assets/img/team-docs/01.jpg" alt="Dental Group")
+                  .team-docs__ava-help
+                    span.team-docs__ava-text.h5 Do you need a help?
+                    button.team-docs__btn.btn.btn--default
+                      span book an Appointment
+                //END   ava
+
+                //BEGIN right
+                .team-docs__right.col-12.col-lg-8.col-xl-7
+                  .team-docs__name.h3 Dr. Salar Barekatain
+                  .team-docs__position Doctor
+                  .team-docs__block.team-docs__block--specialisation
+                    .team-docs__block-title specialization:
+                    .team-docs__block-descr.body-m General Dentist, Orthodontics, Family Dentist
+                  .team-docs__block
+                    .team-docs__block-title about:
+                    .team-docs__block-descr.body-s
+                      p I completed my Master’s Degree from Barry University, and my dental education from Howard University College of Dentistry where I received a Doctorate in Dental Surgery. Shortly after, I was selected to complete a multi-disciplinary hospital residency at the Corporal Michael J. Crescenz VAMC hospital in Philadelphia. This residency provided me with advanced training in all the specialties of dentistry including restorative, removables, oral surgery, and treatment of medically compromised patients. I continue my education and keep up-to-date with changes in dentistry by attending continuing education courses, and by membership in the American Dental Association. I believe that everyone deserves a healthy smile! As your dentist, it’s my job to help you achieve this. I’m committed to developing and maintaining long-term relationships with my patients and strive to provide the best dental care for them. Outside of the dental office, I enjoy spending time with my beautiful wife Shilla, and our dog Pixel. I invite you and your family to come see me and allow me to help you with any of your dental needs.
+                  .team-docs__block
+                    .team-docs__block-title certification:
+                    .team-docs__block-descr
+                    ul.team-docs__block-descr-list
+                      li.team-docs__block-descr-item.body-s American Dental Association
+                  .team-docs__block
+                    .team-docs__block-title languages:
+                    .team-docs__block-descr.body-s Fluent in English, German and Farsi (Persian).
+                //END   right
+            //END   doc
+
+            //BEGIN doc
+            .team-docs__doc
+              .row.justify-content-between
+                //BEGIN ava
+                .team-docs__ava.col-12.col-lg-4
+                  img(src="assets/img/team-docs/02.jpg" alt="Dental Group")
+                  .team-docs__ava-help
+                    span.team-docs__ava-text.h5 Do you need a help?
+                    button.team-docs__btn.btn.btn--default
+                      span book an Appointment
+                //END   ava
+
+                //BEGIN right
+                .team-docs__right.col-12.col-lg-8.col-xl-7
+                  .team-docs__name.h3 Dr. Nader Afgan
+                  .team-docs__position Doctor
+                  .team-docs__block.team-docs__block--specialisation
+                    .team-docs__block-title specialization:
+                    .team-docs__block-descr.body-m General Dentist, Orthodontics, Family Dentist
+                  .team-docs__block
+                    .team-docs__block-title about:
+                    .team-docs__block-descr.body-s
+                      p Dr. Nader Afgan is a general dentist who received his Doctor of Dental Surgery from the University of Maryland, Baltimore College of Dental Surgery. Prior to dental school he attended University of Maryland, College Park where he received his Bachelor of Arts with Honors in German Language and Literature. His training during dental school included a one year clerkship in Oral Surgery as well as a one year clerkship in Pediatric Dentistry where he received advanced training in the respective subjects. Since graduating from dental school he has been in private practice and has been attending continuing education courses to stay up to date on the newest advances in the field of dentistry. Dr. Afgan is also currently serving as Dean’s faculty at the University of Maryland as a clinical instructor to pre-doctoral dental students.
+                  .team-docs__block
+                    .team-docs__block-title certification:
+                    ul.team-docs__block-descr-list
+                      li.team-docs__block-descr-item.body-s American Dental Association
+                      li.team-docs__block-descr-item.body-s Maryland State Dental Association
+                      li.team-docs__block-descr-item.body-s American Academy of Cosmetic Dentistry
+                  .team-docs__block
+                    .team-docs__block-title languages:
+                    .team-docs__block-descr.body-s Fluent in English, German and Farsi. Conversational in Spanish.
+                //END   right
+            //END   doc
+
+            //BEGIN doc
+            .team-docs__doc
+              .row.justify-content-between
+                //BEGIN ava
+                .team-docs__ava.col-12.col-lg-4
+                  img(src="assets/img/team-docs/03.jpg" alt="Dental Group")
+                  .team-docs__ava-help
+                    span.team-docs__ava-text.h5 Do you need a help?
+                    button.team-docs__btn.btn.btn--default
+                      span book an Appointment
+                //END   ava
+
+                //BEGIN right
+                .team-docs__right.col-12.col-lg-8.col-xl-7
+                  .team-docs__name.h3 Dr. Emily
+                  .team-docs__position Registered Dental Hygienist
+                  .team-docs__block.team-docs__block--specialisation
+                    .team-docs__block-title specialization:
+                    .team-docs__block-descr.body-m General Dentist, Family Dentist
+                  .team-docs__block
+                    .team-docs__block-title about:
+                    .team-docs__block-descr.body-s
+                      p Emily has been in the dental field for almost 8 years, starting as a dental assistant and now practicing as a registered dental hygienist. She attended Fortis College in Landover, MD where she did a lot of community outreach in D.C. Emily still strives to volunteer in dental clinics when opportunities arise. Her main goal is to educate her patients on how a healthy mouth can help maintain a healthy body.
+                      p In Emily’s spare time, she likes to travel and spend as much time with her Husky Bella. She tries to maintain a healthy lifestyle so she can practice what she preaches to her patients!
+                  .team-docs__block
+                    .team-docs__block-title languages:
+                    .team-docs__block-descr.body-s Fluent in English, German and Farsi. Conversational in Spanish.
+                //END   right
+            //END   doc
+
+            //BEGIN doc
+            .team-docs__doc
+              .row.justify-content-between
+                //BEGIN ava
+                .team-docs__ava.col-12.col-lg-4
+                  img(src="assets/img/team-docs/04.jpg" alt="Dental Group")
+                  .team-docs__ava-help
+                    span.team-docs__ava-text.h5 Do you need a help?
+                    button.team-docs__btn.btn.btn--default
+                      span book an Appointment
+                //END   ava
+
+                //BEGIN right
+                .team-docs__right.col-12.col-lg-8.col-xl-7
+                  .team-docs__name.h3 Kim Kunhyung
+                  .team-docs__position DDS Endodontist
+                  .team-docs__block.team-docs__block--specialisation
+                    .team-docs__block-title specialization:
+                    .team-docs__block-descr.body-m General Dentist, Family Dentist
+                  .team-docs__block
+                    .team-docs__block-title about:
+                    .team-docs__block-descr.body-s
+                      p Emily has been in the dental field for almost 8 years, starting as a dental assistant and now practicing as a registered dental hygienist. She attended Fortis College in Landover, MD where she did a lot of community outreach in D.C. Emily still strives to volunteer in dental clinics when opportunities arise. Her main goal is to educate her patients on how a healthy mouth can help maintain a healthy body.
+                      p In Emily’s spare time, she likes to travel and spend as much time with her Husky Bella. She tries to maintain a healthy lifestyle so she can practice what she preaches to her patients!
+                  .team-docs__block
+                    .team-docs__block-title certification:
+                    ul.team-docs__block-descr-list
+                      li.team-docs__block-descr-item.body-s American Dental Association
+                      li.team-docs__block-descr-item.body-s Maryland State Dental Association
+                  .team-docs__block
+                    .team-docs__block-title languages:
+                    .team-docs__block-descr.body-s Fluent in English, and Chinese
+                //END   right
+            //END   doc
+          //END   team-docs
+
+          //BEGIN team-subdocs
+          .team-subdocs
+            .row
+              //BEGIN subdoc
+              .subdoc.col-6.col-md-3
+                .subdoc__img
+                  img(src="assets/img/subdocs/01.jpg" alt="subdoc")
+                .subdoc__name.h4 Vicky
+                .subdoc__position Patient Coordinator
+              //END   subdoc
+
+              //BEGIN subdoc
+              .subdoc.col-6.col-md-3
+                .subdoc__img
+                  img(src="assets/img/subdocs/02.jpg" alt="subdoc")
+                .subdoc__name.h4 Liz
+                .subdoc__position Dental Assistant
+              //END   subdoc
+
+              //BEGIN subdoc
+              .subdoc.col-6.col-md-3
+                .subdoc__img
+                  img(src="assets/img/subdocs/03.jpg" alt="subdoc")
+                .subdoc__name.h4 Destiny
+                .subdoc__position Dental Assistant
+              //END   subdoc
+
+              //BEGIN subdoc
+              .subdoc.col-6.col-md-3
+                .subdoc__img
+                  img(src="assets/img/subdocs/04.jpg" alt="subdoc")
+                .subdoc__name.h4 Miha
+                .subdoc__position Dental Assistant
+              //END   subdoc
+          //END   team-subdocs
+    //end content
+
+    include ../sections/footer
+    include ../elements/сhat
+    include ../sections/scripts
