@@ -135,6 +135,16 @@ div.container {
     padding-bottom: 120px;
   }
 }
+.pb-120 {
+  padding-bottom: 40px;
+
+  @include min(768) {
+    padding-bottom: 80px;
+  }
+  @include min(992) {
+    padding-bottom: 120px;
+  }
+}
 
 .bor-t {
   position: relative;

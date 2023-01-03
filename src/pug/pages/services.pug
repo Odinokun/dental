@@ -1,0 +1,26 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'treatments'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs
+      .services
+        .container
+          h1.services__title.h1 Our <span>treatments</span>
+          .services__descr.body-l Don’t settle for dental services administered by any clinic. Instead, choose a dentist office that can offer more than two decades’ worth of guidance and resources. Our staff knows that not everyone’s mouth is the same. Therefore, not every treatment is right for your smile’s particular needs. Rest easy knowing we evaluate every course of treatment available to you before recommending one in particular.
+        include ../sections/services-list
+        include ../sections/banner
+    //end content
+
+    include ../sections/footer
+    include ../elements/сhat
+    include ../sections/scripts

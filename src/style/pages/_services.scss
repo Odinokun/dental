@@ -1,0 +1,23 @@
+.services {
+  padding-bottom: 100px;
+}
+
+.services__title {
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+
+  span {
+    font-family: $philosopher;
+  }
+}
+
+.services__descr {
+  margin-bottom: 40px;
+
+  @include min(992) {
+    margin-bottom: 100px;
+  }
+}
