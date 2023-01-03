@@ -59,12 +59,14 @@ block content
             .contacts-form__input.input
               input(placeholder='Your Full Name')
               span Your Full Name
-            .contacts-form__input.input
+            .contacts-form__input.input.error
               input(placeholder='Email')
               span Email
-            .contacts-form__textarea.textarea
+              .error-mess * Input error style field
+            .contacts-form__textarea.textarea.error
               textarea(placeholder='Text your message')
               span Text your message
+              .error-mess * Input textarea style field
             button.form__btn.btn.btn--default
               span contact me
           //END   form

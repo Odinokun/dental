@@ -67,12 +67,6 @@ button {
 //  resize: none;
 //}
 
-input.error,
-textarea.error {
-  border-color: #ed1b24 !important;
-  background: #fbd1d3 !important;
-}
-
 svg {
   display: block;
   overflow: visible;
@@ -232,6 +226,26 @@ div.container {
     span {
       opacity: 1;
     }
+  }
+
+  &.error {
+    input,
+    textarea {
+      border-color: #ea4848;
+      background-color: #fff7f7;
+    }
+
+    .error-mess {
+      display: block;
+    }
+  }
+
+  .error-mess {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    display: none;
+    color: #ea4848;
   }
 
   input,
