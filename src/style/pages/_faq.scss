@@ -1,0 +1,102 @@
+.faq {
+  padding-bottom: 80px;
+
+  @include min(992) {
+    padding-bottom: 100px;
+  }
+}
+
+.faq__title {
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 60px;
+  }
+}
+
+.faq__footer {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #404040;
+
+  a {
+    padding-left: 3px;
+    color: $brand;
+  }
+}
+
+/* begin ACCORDION */
+.accordion {
+  margin-bottom: 40px;
+  border-top: 1px solid rgba(138, 138, 138, .2);
+
+  @include min(992) {
+    margin-bottom: 80px;
+  }
+}
+
+.accordion__row {
+  border-bottom: 1px solid rgba(138, 138, 138, .2);
+}
+
+.accordion__header {
+  display: flex;
+  padding: 23px 0 20px 0;
+  cursor: pointer;
+
+  &.active {
+    .accordion__header-title {
+      color: #151515;
+    }
+
+    .accordion__header-btn {
+      &::before {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.accordion__header-title {
+  margin-bottom: 0;
+  padding-right: 15px;
+  user-select: none;
+  transition: .5s;
+  color: #8a8a8a;
+}
+
+.accordion__header-btn {
+  position: relative;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    margin: auto;
+    content: '';
+    transition: .5s;
+    border-radius: 2px;
+    background-color: $brand;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+}
+
+.accordion__body {
+  display: none;
+  padding-bottom: 20px;
+}
+
+/* end   ACCORDION */

@@ -1,5 +1,9 @@
 .services {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
+
+  @include min(992) {
+    padding-bottom: 100px;
+  }
 }
 
 .services__title {

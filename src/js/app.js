@@ -8,5 +8,6 @@ $(function () {
   require('./modules/closeDiscount')();
   require('./modules/customScrollbar')();
   require('./modules/inputPlaceholder')();
+  require('./modules/accordion')();
 
 });

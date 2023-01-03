@@ -1,0 +1,44 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'faq'
+
+mixin row(title)
+  .accordion__row
+    .accordion__header
+      .accordion__header-title.h4 #{title}
+      .accordion__header-btn
+    .accordion__body.body-m
+      p Not all toothpastes are effective. Before using whitening toothpaste you should visit your dentist.
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs
+      .faq
+        .container
+          h1.faq__title.h1 FAQ
+          
+          //BEGIN accordion
+          .accordion
+            +row('How can I make an appointment?')
+            +row('Should I use whitening toothpastes and how effective are they?')
+            +row('Why Primary Health Care is very important in life?')
+            +row('Lorem Ipsum question?')
+            +row('Why Primary Health Care is very important in life?')
+          //END   accordion
+
+          .faq__footer
+            span Didn't find your question?
+            a(href="#") Contact us
+    //end content
+
+    include ../sections/footer
+    include ../elements/сhat
+    include ../sections/scripts
