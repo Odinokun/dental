@@ -1,0 +1,68 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'Compleate'
+
+mixin thankSlide(img)
+  .swiper-slide.thank-slider__slide
+    img(src="assets/img/thank-slider/" + img + ".jpg" alt="img")
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs-2-2
+      //BEGIN THANK
+      .thank
+        .container
+          .row
+            .col-12.col-md-5.col-xl-4
+              h1.thank__title.h1 Thank <span>you!</span>
+              .thank__subtitle.h4 Your form has been submitted!
+              .thank__descr.body-m Our clients are our priority, we offer quality dental services with a team of specialists. We will waiting for your visit!
+              .thank__slogan.h4 Subscribe on our social media – only quality content everyday!
+              .thank__socials
+                a(href="#" target="_blank" rel="nofollow noopener noreferrer").btn.btn--transparent
+                  +svg('inst')
+                  span instagram
+                a(href="#" target="_blank" rel="nofollow noopener noreferrer").btn.btn--transparent
+                  +svg('fb')
+                  span facebook
+
+        //BEGIN sliders
+        .thank-sliders
+          //BEGIN thank-slider-01
+          #thank-slider-01.thank-slider.thank-slider-01
+            .swiper-wrapper
+              +thankSlide('01')
+              +thankSlide('02')
+              +thankSlide('03')
+              +thankSlide('04')
+              +thankSlide('05')
+              +thankSlide('06')
+              +thankSlide('07')
+              +thankSlide('08')
+          //END   thank-slider-01
+          //BEGIN thank-slider-02
+          #thank-slider-02.thank-slider.thank-slider-02
+            .swiper-wrapper
+              +thankSlide('08')
+              +thankSlide('07')
+              +thankSlide('06')
+              +thankSlide('05')
+              +thankSlide('04')
+              +thankSlide('03')
+              +thankSlide('02')
+              +thankSlide('01')
+          //END   thank-slider-02
+        //END   sliders
+      //END   THANK
+    //end content
+
+    include ../elements/сhat
+    include ../sections/scripts

@@ -102,4 +102,48 @@ module.exports = function () {
     }
   });
 
+
+  const thankSlider1 = new Swiper('#thank-slider-01', {
+    spaceBetween: 10,
+    grabCursor: false,
+    slidesPerView: 'auto',
+    freeMode: true,
+    freeModeMomentum: true,
+    loop: true,
+    speed: 6000,
+    mousewheelControl: false,
+    keyboardControl: false,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true
+    },
+    breakpoints: {
+      768: {
+        direction: "vertical",
+      }
+    }
+  });
+
+  const thankSlider2 = new Swiper('#thank-slider-02', {
+    spaceBetween: 10,
+    grabCursor: false,
+    slidesPerView: 'auto',
+    freeMode: true,
+    freeModeMomentum: true,
+    loop: true,
+    speed: 6000,
+    mousewheelControl: false,
+    keyboardControl: false,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: true,
+      reverseDirection: true
+    },
+    breakpoints: {
+      768: {
+        direction: "vertical",
+      }
+    }
+  });
+
 };

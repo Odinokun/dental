@@ -1,0 +1,123 @@
+.thank {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  margin: auto;
+  padding-top: 150px;
+  padding-bottom: 450px;
+  background-color: #dff9ea;
+
+  @include min(768) {
+    padding-bottom: 130px;
+  }
+}
+
+.thank__title {
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+
+  span {
+    font-family: $philosopher;
+  }
+}
+
+.thank__subtitle {
+  margin-bottom: 20px;
+  color: $brand;
+}
+
+.thank__descr {
+  margin-bottom: 60px;
+
+  @include min(768) {
+    margin-bottom: 80px;
+  }
+}
+
+.thank__slogan {
+  margin-bottom: 30px;
+}
+
+.thank__socials {
+  display: flex;
+  justify-content: space-between;
+
+  .btn {
+    width: calc(50% - 5px);
+    border: 2px solid $brand;
+
+    @include min(576) {
+      width: 47%;
+    }
+
+    svg {
+      fill: #151515;
+    }
+  }
+}
+
+/* begin SLIDERS */
+.thank-sliders {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  user-select: none;
+  pointer-events: none;
+
+  @include min(768) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 100vh;
+    padding-right: 10px;
+  }
+}
+
+.thank-slider {
+  overflow: hidden;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 10px;
+
+  @include min(768) {
+    width: calc(50% - 5px);
+    height: 100vh;
+    margin-bottom: 0;
+  }
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+}
+
+.thank-slider__slide {
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* end   SLIDERS */
