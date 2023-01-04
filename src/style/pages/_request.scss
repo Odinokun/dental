@@ -195,6 +195,7 @@
     align-items: center;
   }
   @include min(992) {
+    flex-direction: column;
     align-items: normal;
     padding: 0;
   }
@@ -211,6 +212,7 @@
     margin-bottom: 0;
   }
   @include min(992) {
+    width: 100%;
     max-width: 100%;
     margin-bottom: 20px;
   }
