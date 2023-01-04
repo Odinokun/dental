@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'reviews',
     'contacts',
     'team',
+    'request',
     ]);
 });
 

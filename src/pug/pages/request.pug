@@ -1,0 +1,317 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'request'
+
+mixin check(title)
+  label.checkbox
+    input(type="checkbox")
+    span #{title}
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs-2-1
+      .request
+        .container
+          h1.request__title.h1 New Dental Patient Form
+
+          .row.justify-content-between
+            //BEGIN LEFT
+            .request__left.col-12.col-lg-8
+              //BEGIN item
+              .request__item
+                .request__subtitle.h4 Patient Information
+                .row
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='First name *' required)
+                      span First name *
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Last name *' required)
+                      span Last name *
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Home phone')
+                      span Home phone
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Cell phone')
+                      span Cell phone
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Email')
+                      span Email
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.request__input--date.input-date
+                      input(placeholder="Date of Birth *"
+                        type="text"
+                        onfocus="(this.type = 'date')"
+                        onblur="if(!this.value) this.type = 'text'"
+                        required)
+                      span Date of Birth *
+                      .error-mess * Input error style field
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subtitle.h4 Insurance Information
+                .row
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Name of insurance policy holder')
+                      span Name of insurance policy holder
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Policy/plan number')
+                      span Policy/plan number
+                      .error-mess * Input error style field
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subtitle.h4 Dental History
+                .row
+                  .col-12.col-md-6
+                    .request__input.request__input--date.input-date
+                      input(placeholder="Date of last dental cleaning"
+                        type="text"
+                        onfocus="(this.type = 'date')"
+                        onblur="if(!this.value) this.type = 'text'"
+                        required)
+                      span Date of last dental cleaning
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.request__input--date.input-date
+                      input(placeholder="Date of last dental visit"
+                        type="text"
+                        onfocus="(this.type = 'date')"
+                        onblur="if(!this.value) this.type = 'text'"
+                        required)
+                      span Date of last dental visit
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.request__input--date.input-date
+                      input(placeholder="Date of last dental x-rays"
+                        type="text"
+                        onfocus="(this.type = 'date')"
+                        onblur="if(!this.value) this.type = 'text'"
+                        required)
+                      span Date of last dental x-rays
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.request__input--date.input-date
+                      input(placeholder="Do you smoke or chew tobacco?"
+                        type="text"
+                        onfocus="(this.type = 'date')"
+                        onblur="if(!this.value) this.type = 'text'"
+                        required)
+                      span Do you smoke or chew tobacco?
+                      .error-mess * Input error style field
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subsubtitle.h5 Please check any of the following problems that might apply to you:
+                .row
+                  .col-12.col-md-6
+                    +check('Tooth pain or discomfort while chewing')
+                  .col-12.col-md-6
+                    +check('Broken teeth or fillings')
+                  .col-12.col-md-6
+                    +check('Loose, tipped, or shifting teeth')
+                  .col-12.col-md-6
+                    +check('Headaches, earaches, or neck pain')
+                  .col-12.col-md-6
+                    +check('Grinding or clenching teeth')
+                  .col-12.col-md-6
+                    +check('Jaw joint pain')
+                  .col-12.col-md-6
+                    +check('Bleeding teeth or fillings')
+                  .col-12.col-md-6
+                    +check('Sensitivity (hot, cold and/or sweet)')
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subsubtitle.h5 Do you have or have you ever had any of the following?
+                .row
+                  .col-12.col-md-6
+                    +check('Dentures')
+                  .col-12.col-md-6
+                    +check('Periodontal (gum) treatments')
+                  .col-12.col-md-6
+                    +check('Braces')
+                  .col-12.col-md-6
+                    +check('Difficult extractions')
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subtitle.h4 Medical History
+                .request__subsubtitle.h5 Please check any of the following that apply to you:
+                .row
+                  .col-12.col-md-6
+                    +check('AIDS')
+                  .col-12.col-md-6
+                    +check('Bruise easily')
+                  .col-12.col-md-6
+                    +check('Allergies, seasonal')
+                  .col-12.col-md-6
+                    +check('Cancer')
+                  .col-12.col-md-6
+                    +check('Anemia')
+                  .col-12.col-md-6
+                    +check('Chemotherapy')
+                  .col-12.col-md-6
+                    +check('Arthritis')
+                  .col-12.col-md-6
+                    +check('Diabetes')
+                  .col-12.col-md-6
+                    +check('Artificial heart valve')
+                  .col-12.col-md-6
+                    +check('Drug addiction')
+                  .col-12.col-md-6
+                    +check('Asthma')
+                  .col-12.col-md-6
+                    +check('Heart conditions')
+                  .col-12.col-md-6
+                    +check('Blood disease')
+                  .col-12.col-md-6
+                    +check('Kidney disease')
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subsubtitle.h5 Do you have any of the following allergies?
+                .row
+                  .col-12.col-md-6
+                    +check('Penicillin')
+                  .col-12.col-md-6
+                    +check('Local anesthetic')
+                  .col-12.col-md-6
+                    +check('Aspirin')
+                  .col-12.col-md-6
+                    +check('Percocet')
+                  .col-12.col-md-6
+                    +check('Codeine')
+                  .col-12.col-md-6
+                    +check('Sulpha')
+                  .col-12.col-md-6
+                    +check('Latex')
+                  .col-12.col-md-6
+                    +check('Valium')
+                  .col-12
+                    .request__textarea.textarea
+                      textarea(placeholder='Other')
+                      span Other
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subtitle.h4 Your smile
+                .request__subsubtitle.h5 If you could change your smile you would...
+                .row
+                  .col-12.col-md-6
+                    +check('Make your teeth brighter')
+                  .col-12.col-md-6
+                    +check('Repair chipped teeth')
+                  .col-12.col-md-6
+                    +check('Make your teeth straighter')
+                  .col-12.col-md-6
+                    +check('Replace missing teeth')
+                  .col-12.col-md-6
+                    +check('Close spaces')
+                  .col-12.col-md-6
+                    +check('Have a smile makeover')
+                  .col-12.col-md-6
+                    +check('Replace black metal fillings with natural, tooth colored fillings')
+                  .col-12.col-md-6
+                    +check("Replace old crowns that don't match")
+              //END   item
+
+              //BEGIN item
+              .request__item
+                .request__subtitle.h4 Emergency Contact Information
+                .request__emergency
+                  span 1
+                  span First contact
+                .row
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='First name *' required)
+                      span First name *
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Last name *' required)
+                      span Last name *
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Home phone')
+                      span Home phone
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Cell phone')
+                      span Cell phone
+                      .error-mess * Input error style field
+                  .col-12.col-md-6
+                    .request__input.input
+                      input(placeholder='Email')
+                      span Email
+                      .error-mess * Input error style field
+                .request__emergency-add
+                  span
+                    +svg('cross')
+                  span Add another emergency contact
+              //END   item
+
+              //BEGIN request__footer
+              .request__footer
+                button.btn.btn--default
+                  span submit form
+                .request__encrypted
+                  +svg('lock')
+                  span Your information will be encrypted.
+              //END   request__footer
+            //END   LEFT
+
+            //BEGIN RIGHT
+            .request__right.col-12.col-lg-4.col-xl-3
+              .request__subtitle.h4 Your doctor
+              .request__doc
+                .request__doc-ava
+                  img(src="assets/img/docs/02.jpg" alt="doc")
+                .request__doc-info
+                  .request__doc-title.h4 Dr. Nader Afgan
+                  .request__doc-position Doctor
+                  a(href="tel:+4109699300").request__doc-link
+                    +svg('phone')
+                    span 4109699300
+                  a(href="#" target="_blank" rel="nofollow noopener noreferrer").request__doc-link
+                    +svg('fb')
+                    span glenburniedentalgroup
+                  a(href="#" target="_blank" rel="nofollow noopener noreferrer").request__doc-link
+                    +svg('inst')
+                    span glenburniedental
+            //END   RIGHT
+    //end content
+
+    include ../sections/footer
+    include ../elements/сhat
+    include ../sections/scripts

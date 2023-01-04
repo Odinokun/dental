@@ -96,6 +96,7 @@ svg {
 
 .main {
   position: relative;
+
   flex-grow: 1;
 }
 
@@ -209,8 +210,9 @@ div.container {
 
 /* end   CUSTOM SCROLLBAR */
 
-/* begin INPUT + TEXTAREA */
+/* begin INPUT + TEXTAREA + CHECKBOX */
 .input,
+.input-date,
 .textarea {
   position: relative;
   margin-bottom: 10px;
@@ -273,6 +275,7 @@ div.container {
 
   textarea {
     min-height: 120px;
+    resize: none;
   }
 
   span {
@@ -289,4 +292,56 @@ div.container {
   }
 }
 
-/* end   INPUT + TEXTAREA */
+.checkbox {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  input {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    opacity: 0;
+  }
+
+  span {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    user-select: none;
+    pointer-events: none;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.35;
+    padding-top: 3px;
+    color: #404040;
+
+    &::before {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      flex: none;
+      width: 24px;
+      height: 24px;
+      content: '';
+      pointer-events: none;
+      border: 1px solid rgba(138, 138, 138, .15);
+      border-radius: 2px;
+      background-color: #f3f5f7;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 12px 12px;
+    }
+  }
+
+  input:checked + span::before {
+    background-image: url('../img/check.svg');
+  }
+}
+
+/* end   INPUT + TEXTAREA + CHECKBOX */
