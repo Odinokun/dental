@@ -9,5 +9,6 @@ $(function () {
   require('./modules/customScrollbar')();
   require('./modules/inputPlaceholder')();
   require('./modules/accordion')();
+  require('./modules/before-after')();
 
 });

@@ -1,0 +1,72 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'Cosmetic dentistry'
+
+block content
+  #main-wrap.main-wrap
+    include ../sections/header
+
+    //begin content
+    main.main
+      include ../elements/breadcrumbs-2
+      //BEGIN fix
+      .service-fix
+        .service-fix__img
+          img(src="assets/img/bg-service.jpg" alt="service")
+          a(href="#").btn.btn--default
+            +svg('back')
+            span Back to all treatments
+      //END   fix
+
+      .service-wrap
+        .container
+          .row
+            .service.col-12.col-lg-6.col-xxl-5
+              h1.service__title.h1 Cosmetic dentistry
+              button.service__btn.btn.btn--default
+                span book an Appointment
+              p.body-m Discover an easy way to enhance your smile with help from the team at Baltimore City Dental Group. As locally trusted cosmetic dentists in Baltimore, MD, we’re proud to offer a variety of useful cosmetic services for patients interested in improving their smiles. Whether you’re looking to whiten your teeth or straighten them, you’re sure to find the professional care you need at our cosmetic dentist office.
+              p.body-s A Cosmetic Dentist Can Enhance Your Smile. Creating the smile you’ve always wanted is as simple as meeting with a cosmetic dentist from our clinic. With more than 20 years of experience, we’re more than capable of adjusting your teeth’s size, color, or shape using different oral devices and treatments. Schedule an appointment for yourself or a loved one, and together we’ll discuss the many cosmetic services available at our office.
+
+              .service__ul-title Just a few of our specialties include the following:
+              ul.service__ul
+                li.service__li Teeth Whitening
+                li.service__li Dental Crowns
+                li.service__li Dental Bonding
+                li.service__li Dental Veneers
+                li.service__li Dental Implants
+                li.service__li Dentures
+
+              #before-after.service__before-after
+                img(src="assets/img/before-after/before.jpg" alt="img")
+                img(src="assets/img/before-after/after.jpg" alt="img")
+
+              p.body-s Are you interested in cosmetic dental treatments, but uncertain where they fit into your budget? Ask about in-house financing through our clinic. Applying is simple, and plans start at just $275. It’s just one of the many ways our cosmetic dentists are helping local families secure the dental services they need without compromising their finances. Ask how we can help you afford your smile makeover today.
+
+              //BEGIN contacts
+              .service__contact
+                .service__contact-inn
+                  h3.service__contact-title.h3 Contact our cosmetic dentists to learn how we can enhance your smile’s appearance
+                  .service__contact-descr.body-l We proudly serve families in Baltimore, Baltimore City, Towson, Owings Mills, and Pikesville, MD.
+
+                  .service__contact-info
+                    .service__contact-phone
+                      .service__contact-phone-text by phone
+                      a(href="tel:4106850002").service__contact-phone-link.h2 (410) 685 - 0002
+
+                    .service__contact-or
+                      span or
+
+                    button.service__contact-btn.btn.btn--default
+                      span book an Appointment online
+              //END   contacts
+
+    //end content
+
+    include ../sections/footer
+    include ../elements/сhat
+    include ../sections/scripts
