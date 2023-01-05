@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'team',
     'request',
     'thank',
+    'about',
     ]);
 });
 

@@ -1,0 +1,33 @@
+extends ../_template
+
+block variables
+  - let title       = 'Dental Group'
+  - let description = 'Dental Group'
+
+  - let breadcrumbs     = 'Dental Group'
+
+block content
+  #main-wrap.main-wrap.main-wrap--with-discount
+    include ../sections/header-discount
+
+    //begin content
+    main.main
+      include ../sections/index-top
+      include ../sections/index-why-we
+
+
+
+
+
+
+      include ../sections/sale
+      .p-120
+        include ../sections/banner
+      include ../sections/index-text
+      .map#map
+    //end content
+
+    include ../sections/footer
+    include ../elements/сhat
+    include ../sections/scripts-with-map
+

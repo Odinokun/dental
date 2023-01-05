@@ -32,28 +32,28 @@ a {
   line-height: 1;
   letter-spacing: -.04em;
 
-  @include responsive-font(72, 54);
+  @include responsive-font(72, 50);
 }
 
 .h2 {
   line-height: 1.1;
   letter-spacing: -.02em;
 
-  @include responsive-font(48, 36);
+  @include responsive-font(48, 32);
 }
 
 .h3 {
   line-height: 1.2;
   letter-spacing: -.02em;
 
-  @include responsive-font(32, 24);
+  @include responsive-font(32, 22);
 }
 
 .h4 {
   line-height: 1.2;
   letter-spacing: -.02em;
 
-  @include responsive-font(24, 20);
+  @include responsive-font(24, 19);
 }
 
 .h5 {
