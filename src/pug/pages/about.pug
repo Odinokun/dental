@@ -4,22 +4,18 @@ block variables
   - let title       = 'Dental Group'
   - let description = 'Dental Group'
 
-  - let breadcrumbs     = 'Dental Group'
+  - let breadcrumbs     = 'About'
 
 block content
-  #main-wrap.main-wrap.main-wrap--with-discount
-    include ../sections/header-discount
+  #main-wrap.main-wrap
+    include ../sections/header
 
     //begin content
     main.main
-      include ../sections/index-top
+      include ../sections/about-top
       include ../sections/index-why-we
-
-
-
-
-
-
+      include ../sliders/about-slider
+      include ../sections/choose
       include ../sections/sale
       .p-120
         include ../sections/banner

@@ -10,5 +10,7 @@ $(function () {
   require('./modules/inputPlaceholder')();
   require('./modules/accordion')();
   require('./modules/before-after')();
+  require('./modules/bgScroll')();
+  require('./modules/inputDate')();
 
 });

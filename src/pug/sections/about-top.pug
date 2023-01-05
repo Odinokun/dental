@@ -1,0 +1,46 @@
+mixin thankSlide(img)
+  .swiper-slide.thank-slider__slide
+    img(src="assets/img/thank-slider/" + img + ".jpg" alt="img")
+
+//BEGIN ABOUT
+.about
+  .container
+    .row
+      .col-12.col-md-5.col-xl-4
+        h1.about__title.h1 A Warm Welcome To <span>Our Clinic</span>
+        .about__subtitle.body-l Our clients are our priority, we offer quality dental services with a team of specialists.
+    .about__more
+      .about__more-text More details about our services below
+      a(href="#why-we").about__more-btn.scroll
+        +svg('down')
+
+
+  //BEGIN sliders
+  .thank-sliders
+    //BEGIN thank-slider-01
+    #thank-slider-01.thank-slider.thank-slider-01
+      .swiper-wrapper
+        +thankSlide('01')
+        +thankSlide('02')
+        +thankSlide('03')
+        +thankSlide('04')
+        +thankSlide('05')
+        +thankSlide('06')
+        +thankSlide('07')
+        +thankSlide('08')
+    //END   thank-slider-01
+
+    //BEGIN thank-slider-02
+    #thank-slider-02.thank-slider.thank-slider-02
+      .swiper-wrapper
+        +thankSlide('08')
+        +thankSlide('07')
+        +thankSlide('06')
+        +thankSlide('05')
+        +thankSlide('04')
+        +thankSlide('03')
+        +thankSlide('02')
+        +thankSlide('01')
+    //END   thank-slider-02
+  //END   sliders
+//END   ABOUT

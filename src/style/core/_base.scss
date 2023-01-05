@@ -210,11 +210,39 @@ div.container {
 
 /* end   CUSTOM SCROLLBAR */
 
+div.input-date {
+  &.active {
+    span {
+      top: 15px;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: transparent;
+    }
+  }
+
+  input[type='date'] {
+    text-align: left !important;
+
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+  }
+
+  span {
+    width: 70%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    pointer-events: none;
+    opacity: 1;
+    background-color: #f3f5f7;
+  }
+}
+
 /* begin INPUT + TEXTAREA + CHECKBOX */
 .input,
 .input-date,
 .textarea {
   position: relative;
+  width: 100%;
   margin-bottom: 10px;
   transition: .2s;
 
@@ -256,7 +284,8 @@ div.container {
     line-height: 1;
     display: block;
     width: 100%;
-    padding: 24px 15px;
+    padding: 24px;
+    //padding: 24px 15px;
     transition: .2s;
     color: #404040;
     border: 1px solid rgba(138, 138, 138, .15);
@@ -265,7 +294,6 @@ div.container {
 
     @include placeholder-color(#151515, 13px);
     @include min(768) {
-      padding: 24px;
     }
   }
 
@@ -295,8 +323,8 @@ div.container {
 .checkbox {
   position: relative;
   display: block;
-  cursor: pointer;
   margin-bottom: 15px;
+  cursor: pointer;
 
   input {
     position: absolute;
@@ -309,15 +337,15 @@ div.container {
   }
 
   span {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.35;
     position: relative;
     display: block;
+    padding-top: 3px;
     padding-left: 36px;
     user-select: none;
     pointer-events: none;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.35;
-    padding-top: 3px;
     color: #404040;
 
     &::before {

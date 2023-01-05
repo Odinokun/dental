@@ -1,0 +1,77 @@
+.choose {
+  transition: 1s;
+  background-color: #f0f6fc;
+
+  &.active {
+    background-color: #dff9ea;
+  }
+}
+
+.choose__title {
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+
+  span {
+    font-family: $philosopher;
+  }
+}
+
+.choose__descr {
+  margin-bottom: 0;
+}
+
+.choose__item {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include min(992) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+  }
+
+  &:nth-child(odd) {
+    .row {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.choose__img {
+  overflow: hidden;
+  max-width: 700px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+
+  @include min(992) {
+    margin-bottom: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.choose__info {
+  margin: 0 auto;
+
+  @include min(992) {
+    max-width: 460px;
+  }
+}
+
+.choose__title {
+  margin-bottom: 20px;
+
+  @include min(992) {
+    margin-bottom: 40px;
+  }
+}

@@ -1,0 +1,22 @@
+mixin about-slide(img)
+  .about-slider__item.swiper-slide
+    img(src="assets/img/sliders/clinics/" + img + ".jpg" alt="img")
+
+//BEGIN about-slider-wrap
+.about-slider-wrap.pb-120
+  .container
+    //BEGIN about-slider
+    #about-slider.about-slider
+      .swiper-wrapper
+        +about-slide('01')
+        +about-slide('02')
+        +about-slide('03')
+        +about-slide('01')
+        +about-slide('02')
+        +about-slide('03')
+      .swiper-button-prev
+        +svg('left')
+      .swiper-button-next
+        +svg('right')
+    //END   about-slider
+//END   about-slider-wrap

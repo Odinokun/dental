@@ -146,4 +146,12 @@ module.exports = function () {
     }
   });
 
+  const aboutSlider = new Swiper('#about-slider', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    spaceBetween: 20,
+    slidesPerView: 1,
+  });
 };
