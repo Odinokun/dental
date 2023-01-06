@@ -15,6 +15,10 @@
   @include min(992) {
     margin-bottom: 60px;
   }
+
+  span {
+    font-family: $philosopher;
+  }
 }
 
 /* begin DOC */
